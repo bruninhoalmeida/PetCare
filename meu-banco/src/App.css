@@ -1,0 +1,524 @@
+/* Resets Globais */
+#root {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: initial !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  background-color: #fdfdfd !important;
+  color: #333333 !important;
+}
+
+/* ==========================================================================
+   ESTILOS DA TELA 1: VITRINE / CATÁLOGO
+   ========================================================================== */
+.vitrine-screen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fffafb;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-navbar {
+  background-color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0e2e3;
+}
+
+.main-navbar .brand-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e53e3e;
+}
+
+.user-profile-badge {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  background-color: #fff0f1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #fca5a5;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff0f1 100%);
+}
+
+.hero-section h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 14px;
+  color: #666;
+}
+
+.catalog-grid {
+  max-width: 1100px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.service-catalog-card {
+  background-color: #ffffff;
+  border: 1px solid #f0dfdf;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-catalog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(229, 62, 62, 0.07);
+}
+
+.card-badge-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.service-catalog-card h3 {
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.card-footer-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fcedef;
+  padding-top: 15px;
+}
+
+.price-tag {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e53e3e;
+}
+
+.btn-buy-service {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-buy-service:hover {
+  background-color: #c53030;
+}
+
+/* ==========================================================================
+   ESTILOS DA TELA 2: GATEWAY DE PAGAMENTO (TEMA VERMELHO)
+   ========================================================================== */
+.gateway-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.gateway-top-bar {
+  background-color: #f5f5f5;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.gateway-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #a61d24;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gateway-logo small {
+  font-size: 11px;
+  font-weight: normal;
+  color: #666666;
+  margin-left: 5px;
+  border-left: 1px solid #ccc;
+  padding-left: 6px;
+}
+
+.gateway-steps-banner {
+  background-color: #3a1113;
+  padding: 10px 40px;
+  width: 100%;
+}
+
+.gateway-steps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 11px;
+  font-weight: bold;
+  height: 46px;
+}
+
+.step-active {
+  background-color: #e53e3e;
+  color: #ffffff;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
+  padding-right: 35px;
+}
+
+.step-disabled {
+  background-color: #6e5455;
+  color: #d1c5c6;
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 5% 50%);
+  padding-left: 30px;
+  padding-right: 35px;
+}
+
+.secure-badge-box {
+  background-color: #ffffff;
+  padding: 4px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  height: 44px;
+  border: 1px solid #ccc;
+}
+
+.secure-lock-icon {
+  font-size: 18px;
+  color: #e53e3e;
+}
+
+.secure-badge-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Duas Colunas do Gateway */
+.gateway-main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 30px auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 63% 34%;
+  gap: 3%;
+}
+
+@media (max-width: 900px) {
+  .gateway-main-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.payment-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.red-dollar-circle {
+  background-color: #e53e3e;
+  color: white;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.payment-title-row h2 {
+  font-size: 21px;
+  color: #e53e3e;
+  font-weight: normal;
+}
+
+/* Abas */
+.payment-tabs-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  color: #555;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.tab-btn.active {
+  background-color: #e53e3e;
+  color: white;
+  border-color: #e53e3e;
+}
+
+/* Acordeões */
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-panel {
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-panel.is-open {
+  border-color: #e53e3e;
+}
+
+.accordion-header {
+  background-color: #ffffff;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+}
+
+.accordion-body {
+  padding: 20px 16px;
+  background-color: #ffffff;
+  text-align: left;
+  border-top: 1px solid #eee;
+}
+
+.select-brand-instruction {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Bandeiras de Cartão */
+.brands-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.brand-card-button {
+  background-color: #ececec;
+  border: 1px solid #c8c8c8;
+  border-radius: 6px;
+  width: 120px;
+  padding: 12px 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-card-button:hover {
+  background-color: #e2e2e2;
+}
+
+.brand-logo-placeholder {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.mc-colors {
+  position: relative;
+  width: 40px;
+}
+.circle-red {
+  background-color: #ff5f00;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+}
+.circle-orange {
+  background-color: #f79e1b;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: 4px;
+}
+
+.visa-text {
+  color: #1a1f71;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.elo-text {
+  color: #00a4e4;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.brand-name {
+  font-size: 11px;
+  color: #444444;
+}
+
+/* Botões pix/boleto */
+.btn-gateway-action {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-gateway-action:hover {
+  background-color: #c53030;
+}
+
+/* Links de Cancelamento */
+.cancel-row {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.cancel-btn-link {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #e53e3e;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cancel-btn-link:hover {
+  text-decoration: underline;
+}
+
+/* COLUNA DA DIREITA (CARD DE RESUMO SÓLIDO) */
+.summary-red-card {
+  background-color: #e53e3e;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.15);
+}
+
+.summary-red-card h3 {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.summary-details {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.summary-item-name {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.summary-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 20px 0;
+}
+
+.summary-total-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.total-label-text {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.total-price-text {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Rodapé */
+.gateway-footer {
+  margin-top: auto;
+  background-color: #ffffff;
+  padding: 25px 40px;
+  border-top: 1px solid #eeeeee;
+  font-size: 11px;
+  color: #888888;
+  text-align: left;
+}
