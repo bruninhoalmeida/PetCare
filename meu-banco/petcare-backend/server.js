@@ -52,7 +52,7 @@ app.post('/usuarios', async (req, res) => {
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log('===================================================');
-  console.log(`🚀 SERVIDOR PETCARE RODANDO NA PORTA: ${PORT}`);
-  console.log(`📅 Banco de dados mapeado: petcare_db -> tabela: usuarios`);
+  console.log(` SERVIDOR PETCARE RODANDO NA PORTA: ${PORT}`);
+  console.log(` Banco de dados mapeado: petcare_db -> tabela: usuarios`);
   console.log('===================================================');
 });
